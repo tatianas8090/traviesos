@@ -1,19 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+export interface product{
+  id:string;
+  title:string;
+  price:number;
+  imgUrl:string;
+  colors:string;
 
+}
 
-@Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
-})
-export class CardComponent implements OnInit {
-
-
-  constructor() {
-
-  }
-  ngOnInit(): void {
-    const productsArray = [
+export const products = [
   {
     id:"girl1",
     title:"Bota Notuerce 175-Rosado",
@@ -159,34 +153,3 @@ export class CardComponent implements OnInit {
     ],
   },
 ];
-
-const product = document.querySelector("#product");
-
-
-
-function loadproducts() {
-  productsArray.forEach(product => {
-
-    const div = document.createElement("div");
-    div.classList.add("product");
-    div.innerHTML = `
-    <img class="girl1" src="${product.img}" alt=""${product.title}"">
-        <div class="details1">
-          <h2 class="ref1">"${product.title}"</h2>
-          <h3 class="price1">$"${product.price}"</h3>
-        </div>
-        <div class="colors1">
-          <div class="color">"${product.colors}"</div>
-        </div>
-        <span class=add><i class="bi bi-plus-circle">id=""${product.id}"</i></span>
-      </div>
-      `;
-
-      product.append(div);
-  })
-}
-
-    loadproducts();
-  }
-
-}
