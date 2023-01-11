@@ -1,0 +1,23 @@
+<div class="container" *ngFor="let item of items">
+  <img class="imgitem" src="assets/img/{{item.img}}">
+
+  <div class="info" *ngFor="let item of items">
+  <h3 class="title"><strong>{{item.title}}</strong></h3>
+  <h3 class="description"><strong>Tallas: </strong>{{item.description}}</h3>
+  <h4 class="amount"><strong>Cant: </strong>{{item.amount}}</h4>
+  </div>
+
+  <div class="theend" *ngFor="let item of items">
+  <h3 class="price"><strong>Precio: </strong>{{item.price |currency:'COP':'symbol-narrow':'.0-0'}}</h3>
+  <span><a (click)="removeProduct; item.amount === 0 ? removeProduct(item) : ''"><i class="material-icons ">delete</i></a></span>
+  </div>
+
+<hr>
+  <div class="total">
+  <h4 class="end">Total: {{totalPrice |currency:'COP':'symbol-narrow':'.0-0'}} </h4>
+  <button class="finish" (click)="sendWhatsapp()">Enviar por Whatsapp</button>
+  </div>
+
+</div>
+
+

@@ -1,25 +1,17 @@
-import { Component, OnInit } from '@angular/core';
 
+export const products =[
 
-@Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
-})
-export class CardComponent implements OnInit {
-
-
-  constructor() {
-
-  }
-  ngOnInit(): void {
-    const productsArray = [
   {
     id:"girl1",
-    title:"Bota Notuerce 175-Rosado",
+    title:'Bota Notuerce 175-Rosado',
     price:35000,
     img:"../../assets/img/niña1.png",
-    colors:[
+    description:"17 al 22",
+    available: true,
+    amount:1,
+    category:"niña",
+    subtotal: 0,
+    colores:[
       {
         code:" #FFC0CB",
 
@@ -31,6 +23,11 @@ export class CardComponent implements OnInit {
     title:"Bota Notuerce 138-Fucsia",
     price:35000,
     img:"../../assets/img/niña2.png",
+    description:"17 al 22",
+    available: true,
+    amount:1,
+    category:"niña",
+    subtotal: 0,
     colors:[
       {
         code:" #f3112c",
@@ -43,6 +40,11 @@ export class CardComponent implements OnInit {
     title:"Zapato NoTuerce 373-Beige",
     price:35000,
     img:"../../assets/img/niña3.png",
+    description:"17 al 22",
+    available: true,
+    amount:1,
+    category:"niña",
+    subtotal: 0,
     colors:[
       {
         code:" #f3112c",
@@ -55,18 +57,28 @@ export class CardComponent implements OnInit {
       title:"Zapato NoTuerce 215-Negro",
       price:35000,
       img:"../../assets/img/niña5.png",
+      description:"17 al 22",
+      available: true,
+      amount:1,
+      category:"niña",
+      subtotal: 0,
       colors:[
         {
           code:"#000",
 
         },
       ],
-    },
-    {
+  },
+  {
     id:"girl6",
     title:"Bota Notuerce 09-Rosado",
     price:35000,
     img:"../../assets/img/niña6.png",
+    description:"17 al 22",
+    available: true,
+    amount:1,
+    category:"niña",
+    subtotal: 0,
     colors:[
       {
         code:"#FFC0CB",
@@ -79,6 +91,11 @@ export class CardComponent implements OnInit {
     title:"Zapato NoTuerce 363- Fucsia Claro",
     price:35000,
     img:"../../assets/img/niña7.png",
+    description:"17 al 22",
+    available: true,
+    amount:1,
+    category:"niña",
+    subtotal: 0,
     colors:[
       {
         code:"#f3112c",
@@ -91,6 +108,11 @@ export class CardComponent implements OnInit {
     title:"Zapato NoTuerce 124 Niño- Azul x Rojo",
     price:35000,
     img:"../../assets/img/niño1.png",
+    description:"17 al 22",
+    available: true,
+    amount:1,
+    category:"niño",
+    subtotal: 0,
     colors:[
       {
         code:"#020b14e8",
@@ -103,6 +125,11 @@ export class CardComponent implements OnInit {
     title:"Zapato NoTuerce 140 Niño- Blanco x Rojo",
     price:35000,
     img:"../../assets/img/niño2.png",
+    description:"17 al 22",
+    available: true,
+    amount:1,
+    category:"niño",
+    subtotal: 0,
     colors:[
       {
         code:" #ffff",
@@ -115,6 +142,22 @@ export class CardComponent implements OnInit {
     title:"Zapato NoTuerce 170 Niño- Azul x Beige",
     price:35000,
     img:"../../assets/img/niño3.png",
+    description:"17 al 22",
+    available: true,
+    amount:1,
+    category:"niño",
+    subtotal: 0,
+  },
+  {
+    id:"boy4-4",
+    title:"Zapato NoTuerce 169 Niño- Tabaco",
+    price:35000,
+    img:"../../assets/img/niño4.png",
+    description:"17 al 22",
+    available: true,
+    amount:1,
+    category:"niño",
+    subtotal: 0,
     colors:[
       {
         code:" rgba(3, 29, 41, 0.767);",
@@ -123,22 +166,15 @@ export class CardComponent implements OnInit {
     ],
   },
   {
-    id:"boy4-4",
-    title:"Zapato NoTuerce 169 Niño- Tabaco",
-    price:35000,
-    img:"../../assets/img/niño3.png",
-    colors:[
-      {
-        code:"rgba(214, 96, 18, 0.767)",
-
-      },
-    ],
-  },
-  {
     id:"boy5-5",
     title:"Zapato NoTuerce 168 Niño Cafe x Azul",
     price:35000,
-    img:"../../assets/img/niño3.png",
+    img:"../../assets/img/niño5.png",
+    available: true,
+    amount:1,
+    category:"niño",
+    subtotal: 0,
+    description:"17 al 22",
     colors:[
       {
         code:"rgba(214, 96, 18, 0.767)",
@@ -150,7 +186,12 @@ export class CardComponent implements OnInit {
     id:"boy6-6",
     title:"Zapato NoTuerce 121 Niño Cafe",
     price:35000,
-    img:"../../assets/img/niño3.png",
+    img:"../../assets/img/niño6.png",
+    available: true,
+    amount:1,
+    category:"niño",
+    subtotal: 0,
+    description:"17 al 22",
     colors:[
       {
         code:"rgba(68, 33, 10, 0.767)",
@@ -160,33 +201,5 @@ export class CardComponent implements OnInit {
   },
 ];
 
-const product = document.querySelector("#product");
 
 
-
-function loadproducts() {
-  productsArray.forEach(product => {
-
-    const div = document.createElement("div");
-    div.classList.add("product");
-    div.innerHTML = `
-    <img class="girl1" src="${product.img}" alt=""${product.title}"">
-        <div class="details1">
-          <h2 class="ref1">"${product.title}"</h2>
-          <h3 class="price1">$"${product.price}"</h3>
-        </div>
-        <div class="colors1">
-          <div class="color">"${product.colors}"</div>
-        </div>
-        <span class=add><i class="bi bi-plus-circle">id=""${product.id}"</i></span>
-      </div>
-      `;
-
-      product.append(div);
-  })
-}
-
-    loadproducts();
-  }
-
-}
