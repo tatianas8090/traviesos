@@ -1,13 +1,10 @@
 
-.info{
-  float: left;
-
-}
-
 .container{
   background-color: rgb(96,84,84,0.21);
   border-radius: 4rem;
-  display: flex;
+  margin: 30px;
+  width: 580px;
+  height: 300px;
 }
 
 .imgitem{
@@ -16,41 +13,58 @@
   justify-content: flex-start;
   display: flex;
   margin-left: 30px;
+  float: left;
 }
 
 
 .material-icons{
   color:#b30606e7;
   cursor: pointer;
-  align-items: flex-end;
   display: flex;
+  justify-content: flex-end;
+  font-size: 30px;
+  padding-left: 6rem;
+  clear: both;
+  padding-right: 4rem;
+
 }
 
 
-.finish{
+.send{
   background-color: #00bb2d;
   padding:1rem 3rem;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 50px;
   cursor: pointer;
   display: flex;
-  position:fixed;
-  justify-items: center;
-  text-align: center;
+
 }
 
-.price{
-  float: right;
+.title{
+  flex-direction: column;
+  padding: 10px;
+  margin: 1px;
 }
 
-.title,.description,.amount{
-  margin-left: 10px;
-  border-radius: 4rem;
-  justify-content: center;
-  z-index: 1;
-  padding: 8px;
-  margin:20px
+.description{
+  flex-direction: column;
+  padding: 10px;
+}
 
+.text{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+}
 
+.end{
+  display: flex;
+  padding-left: 12rem;
+  font-size: 20px;
+  font-weight: bold;
 
 }

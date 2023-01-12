@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService} from 'src/app/service/cart.service';
+import { ApiService} from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-list-cart',
@@ -10,8 +11,9 @@ export class ListCartComponent implements OnInit {
 
   items:{ id: string; title: string; price: number; description: string; img: string; amount: number; subtotal: number;  }[]=[];
   totalPrice: number = 0;
-  wpService: any;
-  constructor (public cart:CartService,) {}
+  ApiService: any;
+
+  constructor (public cart:CartService, private apiService:ApiService,) {}
 
   ngOnInit(): void {
     this.items = this.cart.CartList();
@@ -32,7 +34,7 @@ export class ListCartComponent implements OnInit {
       message += `Total: ${this.totalPrice}`;
 
 
-      this.wpService.contact(message)}
+      this.ApiService.contact(message)}
    }
 
    sendWhatsapp() {
@@ -43,8 +45,7 @@ export class ListCartComponent implements OnInit {
 
        message += `Total: ${this.totalPrice}`;
 
-
-       const url = this.wpService.contact(message);
+       const url = this.apiService.contact(message);
        console.log(url);
        window.open(url, '_blank');
    }

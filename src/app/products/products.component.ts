@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { products } from '../products';
 import { CartService } from 'src/app/service/cart.service'
+import { ApiService} from 'src/app/service/api.service'
 
 @Component({
   selector: 'app-products',
@@ -14,7 +15,7 @@ export class ProductsComponent implements OnInit {
 
   selectedCategory: string = '';
 
-  constructor(private cart:CartService) {
+  constructor(private cart:CartService, private apiService:ApiService) {
 
    }
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from '../service/cart.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
+
+  constructor(private _cartService: CartService) {}
+
+  itemCount(){
+    return this._cartService.itemsCount();
+  }
 
 }

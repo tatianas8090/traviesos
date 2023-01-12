@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { products } from 'src/app/products/products.component';
+import { ApiService } from 'src/app/service/api.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,9 @@ export class CartService {
 
   products=products;
   items: { id: string; title: string; price: number; description: string; img: string; amount: number; subtotal: number;  }[]=[];
-  constructor() { }
+  item: any;
+
+  constructor(private _apiService:ApiService,) { }
 
 
   addToCart(product: { id: string; title: string; price: number; description: string; img: string; amount: number; subtotal: number }) {
@@ -17,6 +20,7 @@ export class CartService {
 
     this.items.forEach((element:any) => {
       if (element.id === product.id) {
+
         found = true;
         element.amount += 1;
         element.subtotal = element.price * element.amount;
@@ -40,7 +44,6 @@ export class CartService {
         this.items['splice'](index, 1);
       }
     }
-
   }
 
   totalPrice() {
@@ -50,6 +53,10 @@ export class CartService {
 
   CartList(){
     return this.items
+  }
+
+  itemsCount() {
+    return this.items.length;
   }
 
   reduceAmount(product: { id: string; amount: number }) {
@@ -64,4 +71,8 @@ export class CartService {
 }
 
 
+
+function CartList() {
+  throw new Error('Function not implemented.');
+}
 

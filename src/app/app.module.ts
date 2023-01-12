@@ -9,6 +9,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListCartComponent } from './list-cart/list-cart.component';
 import { FormsModule } from '@angular/forms';
+import { ApiService } from './service/api.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    ApiService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
