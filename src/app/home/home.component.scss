@@ -1,0 +1,42 @@
+.about-us{
+  color: #000;
+  padding: rem;
+  margin-top: 2rem;
+
+}
+
+.us{
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+}
+
+.us-1{
+  background: #ffff;
+  margin: 2rem auto;
+  text-align: justify;
+  justify-content: center;
+  display:flex;
+  font-size: 18px;
+
+}
+
+.button-products{
+  color:#000;
+  font-weight: bold;
+  font-size: 24px;
+  border: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.header-products{
+  background-color: #C3ECBF;
+  font-weight: bold;
+  border: transparent;
+  font-size: 24px;
+  padding: 12px;
+  margin: 20px;
+  justify-content: center;
+  cursor: pointer;
+}

@@ -1,24 +1,24 @@
-<section *ngFor="let item of items">
-  <div class="container">
-  <img class="imgitem" src="assets/img/{{item.img}}">
-  <h3 class="title"><strong>{{item.title}}</strong></h3>
-  <h3 class="description"><strong>Tallas: </strong>{{item.description}}</h3>
-  <h3 class="amount"><strong>Cant: </strong>{{item.amount}}</h3>
-  <h3 class="price"><strong>Precio: </strong>{{item.price |currency:'COP':'symbol-narrow':'.0-0'}}</h3>
-  <span><a (click)="cart.removeFromCart(item); item.amount === 0 ? removeProduct(item) : ''"><i class="material-icons ">delete</i></a></span>
-  </div>
-<br>
-<div class="total">
-  <h4 class="end">Precio Total: {{totalPrice |currency:'COP':'symbol-narrow':'.0-0'}} </h4>
-  <button class="send" (click)="sendWhatsapp()">Contactar al vendedor</button>
-</div>
-</section>
-
-
 <ng-container *ngIf="items.length == 0">
     <div class="back">
  <h3 class="text">Tu carrito está vacío.<i class="fa-regular fa-face-frown"></i></h3>
     </div>
 </ng-container>
 
-
+<ng-container class="next" *ngIf="items.length > 0">
+  <section *ngFor="let item of items">
+    <div class="container">
+    <img class="imgitem" src="assets/img/{{item.img}}">
+    <div>
+      <h3 class="title"><strong>{{item.title}}</strong></h3>
+      <h3 class="description"><strong>Tallas: </strong>{{item.description}}</h3>
+      <h3 class="amount"><strong>Cant: </strong>{{item.amount}}</h3>
+      <h3 class="price"><strong>Precio: </strong>{{item.price |currency:'COP':'symbol-narrow':'.0-0'}}</h3>
+      <span><a (click)="cart.removeFromCart(item); item.amount === 0 ? removeProduct(item) : ''"><i class="material-icons ">delete</i></a></span>
+    </div>
+    </div>
+  </section>
+  <div class="total">
+    <h4 class="end">Precio Total: {{totalPrice |currency:'COP':'symbol-narrow':'.0-0'}} </h4>
+    <button class="send" (click)="sendWhatsapp()">Contactar al vendedor</button>
+  </div>
+</ng-container>

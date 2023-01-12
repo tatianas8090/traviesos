@@ -45,3 +45,11 @@
   float: left;
   padding: 8px;
 }
+
+@media screen and (max-width: 428px) {
+  .footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

@@ -4,13 +4,19 @@
   <option value="niña">Niña</option>
   <option value="niño">Niño</option>
 </select>
-<div class="product"*ngFor="let product of products">
-  <h3 class="title">{{product.title}}</h3>
-  <img class="imgproduct" src="../assets/img/{{product.img}}">
-  <div class="product.description">
-  <p class="price"><strong> Tallas: </strong>{{product.description}}</p>
-  <span class="price"><strong>Precio: </strong>{{product.price |currency:'COP':'symbol-narrow':'.0-0'}} </span>
-  <i class="material-icons control_point"(click)="addToCart(product)">control_point</i>
 </div>
-</div>
+
+<section class="product_container">
+  <div class="product" *ngFor="let product of products">
+    <h3 class="title">{{product.title}}</h3>
+    <img class="imgproduct" src="../assets/img/{{product.img}}">
+    <div class="product.description">
+    <p class="price"><strong> Tallas: </strong>{{product.description}}</p>
+    <span class="price"><strong>Precio: </strong>{{product.price |currency:'COP':'symbol-narrow':'.0-0'}} </span>
+    <i class="material-icons control_point"(click)="addToCart(product)">control_point</i>
+  </div>
+  </div>
+</section>
+
+
 

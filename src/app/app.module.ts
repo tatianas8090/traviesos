@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ListCartComponent } from './list-cart/list-cart.component';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from './service/api.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ApiService } from './service/api.service';
     NavBarComponent,
     FooterComponent,
     ListCartComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
