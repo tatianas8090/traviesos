@@ -31,15 +31,13 @@
 
 }
 
-
-.send{
-  background-color: #00bb2d;
+.webwp{
+  background: #00bb2d;
   padding:1rem 3rem;
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 50px;
   cursor: pointer;
   display: flex;
-
 }
 
 .title{
@@ -51,6 +49,9 @@
   flex-direction: column;
 }
 
+.send{
+  padding-left: 8rem;
+}
 .text{
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -68,6 +69,7 @@
   font-weight: bold;
 
 }
+
 
 @media screen and (max-width: 428px) {
   .container{

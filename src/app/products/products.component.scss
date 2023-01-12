@@ -208,7 +208,9 @@ height: 200px;
 }
 
 .filter{
-  background-color: #c3ecbf;
+  background: #11998e;
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+  background: linear-gradient(to right, #38ef7d, #11998e);
   border: #000;
   justify-content: flex-start;
   display: flex;

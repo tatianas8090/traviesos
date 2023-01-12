@@ -5,54 +5,56 @@ import { Component, OnInit} from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  constructor(){
+export class HeaderComponent implements OnInit{
 
-  }
-  ngOnInit(): void {
-  const slider = document.getElementById("slider");
-  let sliderSection =document.getElementsByClassName("slider__section");
-  let sliderSectionLast =sliderSection[sliderSection.length -1];
 
-  const btnleft = document.getElementById("btn-left");
-  const btnright= document.getElementById("btn-right");
+    ngOnInit(): void {
 
-  slider?.insertAdjacentElement ("afterbegin", sliderSectionLast);
 
-  function next() {
-    let sliderSectionFirst = document.getElementsByClassName(".slider__section")[0];
-    slider!.style.marginLeft ="-200%";
-    slider!.style.transition ="all 0.8s"
-    setTimeout(function(){
-      slider!.style.transition ="none";
-      slider?.insertAdjacentElement ('beforeend', sliderSectionFirst);
-      slider!.style.marginLeft= "-100%";
-    }, 500);
-  }
 
-  function prev() {
-    let sliderSection = document.getElementsByClassName("slider__section");
-    let sliderSectionLast = sliderSection[sliderSection.length -1];
-    slider!.style.marginLeft ="0%";
-    slider!.style.transition ="all 0.5s"
-    setTimeout(function(){
-      slider!.style.transition ="none";
-      slider?.insertAdjacentElement ("afterbegin", sliderSectionLast);
-      slider!.style.marginLeft="-100%";
-    }, 500)
+  var botonDerecho = document.getElementsByClassName('icono-derecho')[0]
+  var botonIzquierdo = document.getElementsByClassName('icono-izquierdo')[0]
+
+  var slider = document.getElementsByClassName('slider')[0]  as HTMLElement
+
+  var sliders = document.getElementsByClassName('img-slider').length
+  var contador = 0; 
+
+  function moverDerecha(){
+      contador++;
+
+      if(contador > sliders - 1){
+          contador = 0
+      }
+
+      slider.style.marginLeft = `-${contador * 100}%`
+
+
+
+
+      clearInterval(intervalo)
+      intervalo = setInterval(moverDerecha, 6000)
   }
 
-  btnright?.addEventListener('click', function(){
-    next();
-  });
 
-  btnleft?.addEventListener('click', function(){
-   prev();
-  });
+  var intervalo = setInterval(moverDerecha, 6000)
 
-  setInterval(function(){
-    next();
-  }, 5000);
-}
 
-}
+  function moverIzquierda(){
+      contador--;
+
+      if(contador < 0){
+          contador = sliders -1;
+      }
+
+      slider.style.marginLeft = `-${contador * 100}%`
+
+
+
+      clearInterval(intervalo)
+      intervalo = setInterval(moverDerecha, 6000)
+  }
+
+  botonDerecho.addEventListener('click', moverDerecha)
+  botonIzquierdo.addEventListener('click', moverIzquierda)
+  }}
