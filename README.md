@@ -1,27 +1,70 @@
-# Traviesos
+<p align=center>
+  # Traviesos
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
+Este proyecto inicia con la busqueda de un emprededor quien desea estar a la vanguardia de las nuevas tecnologias, para ello conoci un poco de los productos que el fabrica y con ello se contruye una lista de productos ubicada en el archivo products.ts con ella se crean diferentes servicios y funcionalidades que tendra la pagina web, asi como tambien se utilizara de base para crear templates y estilos, permitiendo la creacion de una lista de productos para continuar con el carrityo de compras.
 
-## Development server
+Tenemos un componente app en el cual se encuentran los componentes:
+-footer
+-header
+-home
+-list-card
+-nav-bar
+-products
+los cuales son las primeras vistas para el usuario
+<p align=center>
+  <img src="https://i.postimg.cc/BbYBttMk/app.png">
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<h3> Footer </h3>
+El footer es completamente funcional, nos dirige a las redes y ademas nos brinda informacion acerca de como contactar al vendedor o fabricante.
+<p align=center>
+  <img src="https://i.postimg.cc/L4bCV6tv/img.png">
+</p>
 
-## Code scaffolding
+<h3> Header and Home </h3>
+En el header vamos a encontrar algo de historia de la empresa, un slider de los productos que ofrecen. esto completamente funcional.
+<p align=center>
+  <img src="https://i.postimg.cc/4xNj8FKQ/header.png">
+</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<h3> List Card </h3>
+En la list card, nos encontramos con el carrito de compras y sus funcionalidades como lo son eliminar, agregar e incluso realizar la suma de productos.Este se trabajo con ts ademas de la lista inicial de products.ts
+<p align=center>
+  <img src="https://i.postimg.cc/PJSQNKtd/listcart.png">
+</p>
 
-## Build
+<h3> Nav-bar </h3>
+Aca nos encontramos con todo lo referente al punto de partida de la web, nos permite ubicarnos y saber donde estamos, ademas de ello cuenta con el contador de productos agregados al carrito.
+<p align=center>
+  <img src="https://i.postimg.cc/SRRz14hp/navbar.png">
+</p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<h3>Products </h3>
+En products encontramos con todos los productos que tenemos disponibles para la venta, esto permitiendonos tener un filtro en cuanto a productos.
+<p align=center>
+  <img src="https://i.postimg.cc/76WL6Tpp/products.png">
+</p>
+El segundo grupo esta ubicado en la carpeta assets donde encontramos las imagenes necesarias para este proyecto.
+<p align=center>
+  <img src="https://i.postimg.cc/prbgqW8m/footer.png">
+</p>
 
-## Running unit tests
+La funcionalidad de la pagina se dan desde dos servicos llamados "Cart-service" y "Api-service", los cuales me permiten conectar con las diferentes funcionalidades de la web
+<p align=center>
+  <img src=https://i.postimg.cc/1tLWsv52/service.png"">
+</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<h3> Servicios </h3>
+Tenemos dos servicios, el servicio cart tiene las funcionalidades del carrito de compras. Donde me permite agregar elementos, eliminar y contar. 
+<p align=center>
+  <img src=https://i.postimg.cc/3xdDFYZj/cart.png>
+</p>
 
-## Running end-to-end tests
+el servicio ApiService tiene las funcionalidad de conectar al comprador con el vendedor a traves del whatsapp. informando acerca del interes que se tiene para adquirir productos, de la siguiente manera.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<p align=center>
+  <img src=https://i.postimg.cc/KcpGrLpV/api.png>
+</p>
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
