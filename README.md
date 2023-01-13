@@ -1,5 +1,5 @@
 <p align=center>
-  # Traviesos
+  <h1>Traviesos</h1>
 </p>
 
 Este proyecto inicia con la busqueda de un emprededor quien desea estar a la vanguardia de las nuevas tecnologias, para ello conoci un poco de los productos que el fabrica y con ello se contruye una lista de productos ubicada en el archivo products.ts con ella se crean diferentes servicios y funcionalidades que tendra la pagina web, asi como tambien se utilizara de base para crear templates y estilos, permitiendo la creacion de una lista de productos para continuar con el carrityo de compras.
@@ -31,7 +31,7 @@ En el header vamos a encontrar algo de historia de la empresa, un slider de los 
 <h3> List Card </h3>
 En la list card, nos encontramos con el carrito de compras y sus funcionalidades como lo son eliminar, agregar e incluso realizar la suma de productos.Este se trabajo con ts ademas de la lista inicial de products.ts
 <p align=center>
-  <img src="https://i.postimg.cc/PJSQNKtd/listcart.png">
+  <img src="https://i.postimg.cc/0QFJ432M/listcart.png">
 </p>
 
 <h3> Nav-bar </h3>
